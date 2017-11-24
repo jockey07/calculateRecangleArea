@@ -48,15 +48,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2W6-ne-oTe">
+                                <rect key="frame" x="149.5" y="341" width="76" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="nGd-6x-jMg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Calculate"/>
+                                <connections>
+                                    <action selector="calculareBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oqa-mm-4t7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="2W6-ne-oTe" firstAttribute="top" secondItem="vuj-0W-vQh" secondAttribute="bottom" constant="60" id="4L8-C1-a2k"/>
                             <constraint firstItem="hU1-q3-SbZ" firstAttribute="top" secondItem="Gqj-fn-6dj" secondAttribute="bottom" constant="20" id="7Ec-8k-HF5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gqj-fn-6dj" secondAttribute="trailing" constant="16" id="DNX-jA-hBC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="A1v-Cn-LM1" secondAttribute="trailing" constant="60" id="GAP-g3-3Kz"/>
                             <constraint firstItem="9sr-uH-lqF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U0y-FW-eLf"/>
                             <constraint firstItem="9sr-uH-lqF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="WOG-x3-Jh5"/>
                             <constraint firstItem="vuj-0W-vQh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="aNh-rS-ofZ"/>
+                            <constraint firstItem="2W6-ne-oTe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="abg-MB-9QZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hU1-q3-SbZ" secondAttribute="trailing" constant="16" id="cW3-Zk-Ayp"/>
                             <constraint firstItem="vuj-0W-vQh" firstAttribute="top" secondItem="hU1-q3-SbZ" secondAttribute="bottom" constant="90" id="eUl-Sp-EJV"/>
                             <constraint firstItem="Gqj-fn-6dj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="gpy-YF-FoG"/>
@@ -66,6 +79,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="resultLbl" destination="A1v-Cn-LM1" id="MXZ-AI-twg"/>
+                        <outlet property="sideALength" destination="Gqj-fn-6dj" id="Wjn-H3-QoE"/>
+                        <outlet property="sideBLength" destination="hU1-q3-SbZ" id="qLr-6Y-EUc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

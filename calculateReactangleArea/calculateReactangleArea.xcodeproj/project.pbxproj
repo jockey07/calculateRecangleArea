@@ -12,6 +12,8 @@
 		B578EE6B1FC89B5900DAE283 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B578EE691FC89B5900DAE283 /* Main.storyboard */; };
 		B578EE6D1FC89B5900DAE283 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B578EE6C1FC89B5900DAE283 /* Assets.xcassets */; };
 		B578EE701FC89B5900DAE283 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B578EE6E1FC89B5900DAE283 /* LaunchScreen.storyboard */; };
+		B578EE791FC89FAD00DAE283 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = B578EE781FC89FAD00DAE283 /* Area.swift */; };
+		B578EE7C1FC8B20E00DAE283 /* lengthTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = B578EE7B1FC8B20E00DAE283 /* lengthTextFields.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		B578EE6C1FC89B5900DAE283 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B578EE6F1FC89B5900DAE283 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B578EE711FC89B5900DAE283 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B578EE781FC89FAD00DAE283 /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
+		B578EE7B1FC8B20E00DAE283 /* lengthTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lengthTextFields.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 		B578EE641FC89B5900DAE283 /* calculateReactangleArea */ = {
 			isa = PBXGroup;
 			children = (
+				B578EE7A1FC8B1C200DAE283 /* Views */,
+				B578EE771FC89F7200DAE283 /* Model */,
 				B578EE651FC89B5900DAE283 /* AppDelegate.swift */,
 				B578EE671FC89B5900DAE283 /* ViewController.swift */,
 				B578EE691FC89B5900DAE283 /* Main.storyboard */,
@@ -62,6 +68,22 @@
 				B578EE711FC89B5900DAE283 /* Info.plist */,
 			);
 			path = calculateReactangleArea;
+			sourceTree = "<group>";
+		};
+		B578EE771FC89F7200DAE283 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B578EE781FC89FAD00DAE283 /* Area.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B578EE7A1FC8B1C200DAE283 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B578EE7B1FC8B20E00DAE283 /* lengthTextFields.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +159,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B578EE681FC89B5900DAE283 /* ViewController.swift in Sources */,
+				B578EE791FC89FAD00DAE283 /* Area.swift in Sources */,
 				B578EE661FC89B5900DAE283 /* AppDelegate.swift in Sources */,
+				B578EE7C1FC8B20E00DAE283 /* lengthTextFields.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
