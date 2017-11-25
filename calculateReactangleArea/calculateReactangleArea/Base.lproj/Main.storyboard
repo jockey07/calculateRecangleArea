@@ -18,13 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter side a" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gqj-fn-6dj">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter side a" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gqj-fn-6dj" customClass="lengthTextFields" customModule="calculateReactangleArea" customModuleProvider="target">
                                 <rect key="frame" x="16" y="90.5" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter side b" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hU1-q3-SbZ">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter side b" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hU1-q3-SbZ" customClass="lengthTextFields" customModule="calculateReactangleArea" customModuleProvider="target">
                                 <rect key="frame" x="16" y="140.5" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -36,13 +36,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Area size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuj-0W-vQh">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Area size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuj-0W-vQh">
                                 <rect key="frame" x="60" y="260.5" width="70" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1v-Cn-LM1">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1v-Cn-LM1">
                                 <rect key="frame" x="246" y="261" width="69" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -59,11 +59,19 @@
                                     <action selector="calculareBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oqa-mm-4t7"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwZ-9j-wmD">
+                                <rect key="frame" x="108" y="381" width="158" height="30"/>
+                                <state key="normal" title="New Calculation"/>
+                                <connections>
+                                    <action selector="newCalcBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qap-9X-4PZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="2W6-ne-oTe" firstAttribute="top" secondItem="vuj-0W-vQh" secondAttribute="bottom" constant="60" id="4L8-C1-a2k"/>
                             <constraint firstItem="hU1-q3-SbZ" firstAttribute="top" secondItem="Gqj-fn-6dj" secondAttribute="bottom" constant="20" id="7Ec-8k-HF5"/>
+                            <constraint firstItem="pwZ-9j-wmD" firstAttribute="top" secondItem="2W6-ne-oTe" secondAttribute="bottom" constant="10" id="Bjb-Ii-pyE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gqj-fn-6dj" secondAttribute="trailing" constant="16" id="DNX-jA-hBC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="A1v-Cn-LM1" secondAttribute="trailing" constant="60" id="GAP-g3-3Kz"/>
                             <constraint firstItem="9sr-uH-lqF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U0y-FW-eLf"/>
@@ -76,10 +84,13 @@
                             <constraint firstItem="hU1-q3-SbZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="iTF-Tb-6Cn"/>
                             <constraint firstItem="A1v-Cn-LM1" firstAttribute="top" secondItem="hU1-q3-SbZ" secondAttribute="bottom" constant="90" id="lUv-8t-ybt"/>
                             <constraint firstItem="Gqj-fn-6dj" firstAttribute="top" secondItem="9sr-uH-lqF" secondAttribute="bottom" constant="20" id="yyT-h2-SKk"/>
+                            <constraint firstItem="pwZ-9j-wmD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zHj-tp-g7x"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="areaLbl" destination="vuj-0W-vQh" id="5wb-Ua-oAB"/>
+                        <outlet property="newCalcBtn" destination="pwZ-9j-wmD" id="nBg-Ol-dq2"/>
                         <outlet property="resultLbl" destination="A1v-Cn-LM1" id="MXZ-AI-twg"/>
                         <outlet property="sideALength" destination="Gqj-fn-6dj" id="Wjn-H3-QoE"/>
                         <outlet property="sideBLength" destination="hU1-q3-SbZ" id="qLr-6Y-EUc"/>
